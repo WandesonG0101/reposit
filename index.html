@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Formulário de Contato</title>
+   <style>
+       /* A primeira seção define o estilo de fundo
+       e a família da fonte utilizada no corpo da página. */
+       body {
+           background-color: #f2f2f2;
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+       }
+
+
+       /* A segunda seção estiliza o formulário em si,
+        definindo a cor de fundo, o preenchimento interno,
+        a largura máxima, as margens e um efeito de sombra.*/
+       form {
+           background-color: #fff;
+           padding: 20px;
+           max-width: 500px;
+           margin: 0 auto;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+           border-radius: 5px;
+       }
+
+
+       /* A terceira seção estiliza as tags <label>
+            utilizadas no formulário, dando um espaçamento
+            abaixo do texto, definindo um peso de fonte em
+            negrito e uma cor de texto específica.*/
+       label {
+           display: block;
+           margin-bottom: 10px;
+           font-weight: bold;
+           color: #444;
+       }
+
+
+       /*
+       largura: 100%; define a largura dos elementos para 100% de seu contêiner,
+        garantindo que eles ocupem toda a largura do espaço disponível.
+preenchimento: 10px; adiciona 10 pixels de preenchimento à parte superior,
+ direita, inferior e esquerda dos elementos, fornecendo algum espaçamento
+ entre o conteúdo do elemento e sua borda.
+borda: 1px sólido #ccc; define uma borda sólida de 1 pixel ao redor dos
+ elementos, com a cor #ccc (um cinza claro).
+raio da borda: 5px; adiciona um raio de borda de 5 pixels aos elementos,
+ arredondando os cantos de suas bordas.
+margem inferior: 20px; adiciona 20 pixels de margem à parte inferior dos elementos,
+ fornecendo algum espaço entre eles e o próximo elemento.
+tamanho da fonte: 16px; define o tamanho da fonte do texto dos elementos para 16 pixels.
+cor: #555; define a cor do texto dos elementos para #555 (um cinza escuro).
+box-sizing: border-box; especifica a propriedade box-sizing como border-box,
+ que garante que o preenchimento e a borda do elemento sejam incluídos em sua
+  largura e altura totais, em vez de serem adicionados a ela.
+       */
+       input[type="text"], input[type="email"], input[type="tel"], textarea {
+           width: 100%;
+           padding: 10px;
+           border: 1px solid #ccc;
+           border-radius: 5px;
+           margin-bottom: 20px;
+           font-size: 16px;
+           color: #555;
+           box-sizing: border-box;
+       }
+
+
+       /*
+       cor de fundo: #4CAF50; define a cor de fundo do botão como #4CAF50 (um tom de verde).
+cor: #fff; define a cor do texto do botão para branco.
+preenchimento: 10px 20px; adiciona 10 pixels de preenchimento à parte superior e inferior
+ do botão e 20 pixels de preenchimento à esquerda e à direita, fornecendo algum espaçamento
+ entre o conteúdo do botão e sua borda.
+borda: nenhum; remove a borda ao redor do botão, criando uma aparência plana.
+raio da borda: 5px; adiciona um raio de borda de 5 pixels ao botão, arredondando
+os cantos de sua borda.
+tamanho da fonte: 16px; define o tamanho da fonte do texto do botão para 16 pixels.
+cursor: ponteiro; altera o cursor do mouse para um ponteiro ao passar o mouse sobre
+o botão, indicando ao usuário que é clicável.
+       */
+       input[type="submit"] {
+           background-color: #4CAF50;
+           color: #fff;
+           padding: 10px 20px;
+           border: none;
+           border-radius: 5px;
+           font-size: 16px;
+           cursor: pointer;
+       }
+
+
+       /*
+       input[type="submit"]:hover
+        seleciona o elemento de entrada com um tipo de "enviar" quando o usuário
+         passa o mouse sobre ele.
+        cor de fundo: #3e8e41; define a cor de fundo do botão como #3e8e41
+        (um tom mais escuro de verde)
+        quando o usuário passa o mouse sobre ele.
+       */
+       input[type="submit"]:hover {
+           background-color: #3e8e41;
+       }
+
+
+        /*
+        .error seleciona qualquer elemento com a classe "error".
+        cor vermelha; define a cor do texto do elemento para vermelho.
+        intensidade da fonte: Negrito; define o peso da fonte do texto do elemento para negrito.
+        margem superior: 10px; adiciona 10 pixels de margem ao topo do elemento, fornecendo algum espaçamento entre ele e o elemento acima dele.
+        */
+       .error {
+           color: red;
+           font-weight: bold;
+           margin-top: 10px;
+       }
+       .ima{
+        background-image: url("https://hinova.com.br/wp-content/uploads/2018/11/futurogestaoempresarial-1024x585.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 800px;
+        width: 100%;
+       }
+       .cor{
+        background-color:rgb(169,169,169);
+       }
+   </style>
+</head>
+<body>
+    <!--
+O elemento <form> envolve todos os elementos do formulário e define o início e o fim do formulário.
+O elemento <label> cria um rótulo para cada campo de entrada do formulário. O atributo for especifica
+     a qual entrada o rótulo está associado. Nesse caso, o texto da etiqueta identifica quais
+      informações devem ser inseridas em cada campo.
+O elemento <input> define um campo de entrada para o formulário. Cada entrada tem um atributo de
+tipo que especifica que tipo de entrada é, como "texto" para uma entrada de texto ou "email" para
+ uma entrada de endereço de e-mail. Os atributos id e name fornecem ao campo de entrada um identificador
+  exclusivo e um nome que pode ser usado para fazer referência a ele em outras partes do código.
+   O atributo obrigatório especifica que o campo de entrada deve ser preenchido antes que o
+    formulário possa ser enviado.
+O elemento <textarea> cria um campo de entrada de texto de várias linhas para mensagens ou
+    comentários mais longos. Os atributos id, name e required funcionam da mesma forma que
+    para o elemento <input>.
+O elemento <input> final é um botão "enviar" no qual o usuário clica para enviar o formulário.
+O atributo type é definido como "enviar" para indicar que este é um botão que enviará o formulário.
+ O atributo value especifica o texto que será exibido no botão.
+
+
+    -->
+    
+  <div class="ima">
+    <form class="cor">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required>
+ 
+ 
+ 
+ 
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+ 
+ 
+ 
+ 
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+ 
+ 
+ 
+ 
+        <label for="assunto">Assunto:</label>
+        <input type="text" id="assunto" name="assunto" required>
+ 
+ 
+ 
+ 
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+ 
+ 
+ 
+ 
+        <input type="submit" value="Enviar">
+    </form>
+
+  </div>
+
+
+
+
+   <script>
+        const form = document.querySelector('form');
+
+
+
+
+form.addEventListener('submit', (event) => {
+ event.preventDefault(); // impede que o formulário seja enviado
+
+
+
+
+ // valida os campos do formulário
+ const nome = document.getElementById('nome').value.trim();
+ const email = document.getElementById('email').value.trim();
+ const telefone = document.getElementById('telefone').value.trim();
+ const assunto = document.getElementById('assunto').value.trim();
+ const mensagem = document.getElementById('mensagem').value.trim();
+
+
+
+
+ // verifica se os campos são válidos
+ let valido = true;
+ if (nome === '') {
+   alert('Por favor, informe seu nome completo.');
+   valido = false;
+ }
+ if (email === '') {
+   alert('Por favor, informe seu endereço de email.');
+   valido = false;
+ }
+ if (telefone === '') {
+   alert('Por favor, informe seu número de telefone.');
+   valido = false;
+ }
+ if (assunto === '') {
+   alert('Por favor, informe o assunto da mensagem.');
+   valido = false;
+ }
+ if (mensagem === '') {
+   alert('Por favor, escreva uma mensagem.');
+   valido = false;
+ }
+
+
+
+
+ if (valido) {
+   alert('Formulário enviado com sucesso!');
+   form.submit(); // envia o formulário
+ }
+});
+   </script>
+</body>
+</html>
